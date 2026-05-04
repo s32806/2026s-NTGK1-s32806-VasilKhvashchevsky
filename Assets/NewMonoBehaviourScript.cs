@@ -25,11 +25,11 @@ public class PlayerMovement : MonoBehaviour
 
         float moveInput = Input.GetAxis("Horizontal");
 
-        rb.velocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
         UpdateAnimations();
         Flip(moveInput);
@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
         return hit.collider != null;
     }
     private void UpdateAnimations() {
-            an.SetFloat("XMovement", Mathf.Abs(rb.velocity.x));
-            an.SetFloat("YMovement", Mathf.Abs(rb.velocity.y));
+            an.SetFloat("run", Mathf.Abs(rb.linearVelocity.x));
+            an.SetFloat("jump", Mathf.Abs(rb.linearVelocity.y));
     }
     private void Flip(float moveInput) {
             if (moveInput > 0) {
