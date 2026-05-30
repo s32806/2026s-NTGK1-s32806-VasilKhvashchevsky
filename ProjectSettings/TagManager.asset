@@ -8,6 +8,7 @@ TagManager:
   - Spikes
   - danger
   - FirePoint
+  - DeathZone
   layers:
   - Default
   - TransparentFX

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 040cf388aea3bf249ac0d70a7da9ff88
+guid: 0cf159934b752cc47a3d8577ddf83331
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4015880646665168236
-    second: Hit 04_0
+      213: -5987725052110043666
+    second: Dead Hit 02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit 04_0
+      name: Dead Hit 02_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 8
-        width: 25
-        height: 30
+        x: 18
+        y: 7
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49a182334d9b448c0800000000000000
-      internalID: -4015880646665168236
+      spriteID: ee506481ac357eca0800000000000000
+      internalID: -5987725052110043666
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hit 04_0: -4015880646665168236
+      Dead Hit 02_0: -5987725052110043666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

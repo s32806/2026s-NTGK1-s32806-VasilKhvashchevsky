@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class GameManager : MonoBehaviour
     public int coins = 0;
 
     private UIManager uiManager;
+
+    public Animator an;
+
+    public GameObject deathScreen;
 
     private void Awake()
     {
@@ -25,6 +31,11 @@ public class GameManager : MonoBehaviour
         currentHealth = maxHealth;
 
         uiManager = FindObjectOfType<UIManager>();
+
+        an = GetComponent<Animator>();
+
+        deathScreen.SetActive(false);
+
         UpdateUI();
     }
 
@@ -47,12 +58,23 @@ public class GameManager : MonoBehaviour
             AddCoins(1);
         }
     }
+    
 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateUI();
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        an.SetTrigger("die");
+        StartCoroutine(ShowDeathScreen());
     }
 
     public void Heal(int amount)
@@ -60,6 +82,11 @@ public class GameManager : MonoBehaviour
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateUI();
+    }
+    IEnumerator ShowDeathScreen()
+    {
+    yield return new WaitForSeconds(1f);
+    deathScreen.SetActive(true);
     }
 
     public void AddCoins(int amount)

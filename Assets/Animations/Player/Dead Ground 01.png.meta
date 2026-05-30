@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 040cf388aea3bf249ac0d70a7da9ff88
+guid: 461dff7b5820d384ba9794aedac4fd29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4015880646665168236
-    second: Hit 04_0
+      213: 3892838150563630428
+    second: Dead Ground 01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hit 04_0
+      name: Dead Ground 01_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 16
         y: 8
-        width: 25
-        height: 30
+        width: 31
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49a182334d9b448c0800000000000000
-      internalID: -4015880646665168236
+      spriteID: c5d0f6c3ca3260630800000000000000
+      internalID: 3892838150563630428
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bec77a2a212fdb548b25e0c49d459e57
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hit 04_0: -4015880646665168236
+      Dead Ground 01_0: 3892838150563630428
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -19,5 +19,20 @@ public class SpikeDetector : MonoBehaviour
             GameManager.Instance.TakeDamage(dangerDamage);
             an.SetTrigger("hit");
         }
+
+        if (other.CompareTag("DeathZone"))
+        {
+            Die();
+        }
+        if (other.CompareTag("DeathZone"))
+{
+    GameManager.Instance.currentHealth = 0;
+    GameManager.Instance.TakeDamage(0);
+}
+    }
+
+    void Die()
+    {
+        an.SetTrigger("die");
     }
 }
